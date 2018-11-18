@@ -7,24 +7,24 @@ public class PrimeNumber {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int input = sc.nextInt();
-		int count =0;
-		for (int i=2;i<input;i++)
+		for(int j=2; j<=input; j++)
 		{
-			if ((input%i) == 0)
-			{	
-				count++;
-				break;
+			int count =0;
+			for (int i=2;i<j;i++)
+			{
+				if ((j%i) == 0)
+				{	
+					count++;
+					break;
+				}
 			}
+				if (count==0)
+				{
+					System.out.println(j);
+				
+				}
+		
 		}
-			if (count==0)
-			{
-				System.out.println("input is prime number");
-			
-			}
-			else
-			{
-				System.out.println("input is not prime number");
-			}
-	}
+		}
 
 }
